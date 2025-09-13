@@ -4,6 +4,7 @@ import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/auth.js";
 import repoRoutes from "./routes/repo.js";
 import issueRoutes from "./routes/issue.js";
+import collaboratorRoutes from "./routes/collaborator.js";
 
 dotenv.config();
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/repos", repoRoutes);
 app.use("/api/repos/:repoId/issues", issueRoutes);
+app.use("/api/repos/:repoId/collaborators", collaboratorRoutes);
 
 connectDB();
 
