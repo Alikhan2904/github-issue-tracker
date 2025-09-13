@@ -1,0 +1,11 @@
+{
+  "name": "@repo/auth-service",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "echo dev auth-service",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "vitest"
+  }
+}
